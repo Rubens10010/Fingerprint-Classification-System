@@ -1,0 +1,5 @@
+Codigo tomado de:
+http://scikit-image.org/docs/dev/auto_examples/edges/plot_skeleton.html
+
+Compilar:
+python filename.py

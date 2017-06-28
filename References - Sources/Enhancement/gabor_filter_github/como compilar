@@ -1,0 +1,2 @@
+compile as:
+python GaborFilter.py test.png 16

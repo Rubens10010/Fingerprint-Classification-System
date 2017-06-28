@@ -1,0 +1,6 @@
+como compilar: 
+
+cd src
+python main_enhancement.py [imagepath]
+
+default: ../images/ppf1.png
