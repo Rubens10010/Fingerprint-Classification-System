@@ -16,7 +16,7 @@ from timeit import default_timer as timer
 
 db= sys.argv[1]
 
-fn = "om_featuresDB2.dat"
+fn = "om_featuresDB2_2.dat"
 create_fn = open(fn,"wb+")
 create_fn.close()
 
@@ -39,8 +39,8 @@ def get_features_vector(q,sourceImage):
             suppress=True)
 
     image = ndimage.imread(filename, mode="L").astype("float64")
-    orientations = utils.estimateOrientations(image,w=20, interpolate=False)
-    
+    orientations = utils.estimateOrientations(image,w=10, interpolate=False)
+
     with open(fn, 'rb') as f:
       size = len(f.read())
     #print(str(orientations.flatten()))

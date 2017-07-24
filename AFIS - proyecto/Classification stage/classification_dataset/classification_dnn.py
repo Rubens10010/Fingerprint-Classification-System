@@ -64,6 +64,7 @@ l_fst_layer = [90, 80, 70, 60, 50]
 l_snd_layer = [70, 60, 50, 40, 30]
 l_trd_layer = [50, 40, 30, 20, 10]
 
+print("starting experiment")
 output = open(test_name + "training_network.dat","w+")
 act = "sigmoid"
 output.write("layer1 layer2 layer3 before_ft_accuracy after_ft_accuracy time\n")

@@ -27,7 +27,7 @@ test_name = "400input_"
 #x_test = x_test.reshape((len(x_test), np.prod(x_test.shape[1:])))
 
 # loading features dataset
-dataset = numpy.loadtxt("om_featuresDB2_400.dat", delimiter=" ",usecols=range(1,402))
+dataset = numpy.loadtxt("om_featuresDB2_2.dat", delimiter=" ",usecols=range(1,402))
 print("Dataset loaded")
 
 #numpy.random.shuffle(dataset)
@@ -58,7 +58,7 @@ y_test = np_utils.to_categorical(y_test, nb_classes)
 
 #print(x_test[0])
 #print(ad)
-l_epochs = [1000,2000,3000,4000,5000]
+l_epochs = [2000,3000]
 l_fst_layer = [350,300,250,200]
 l_snd_layer = [175,150,125,100]
 l_trd_layer = [80,70,50,40]
