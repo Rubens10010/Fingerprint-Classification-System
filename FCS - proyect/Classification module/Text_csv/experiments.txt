@@ -1,0 +1,126 @@
+### Experiments made for classification task of NIST4 fingerprint ROI Dataset
+
+32% of input dimension first layer1
+8% of input dimension second layer
+4% of input dimension third layer
+
+# ---- relu
+
+100: batch
+1.- experiment: 400 inputs
+    layers: 128 32 16
+    accuracy: 0.6165
+    loss: 1.54
+    val accuracy: 0.90
+    val loss: 0.589
+    time: 300.094
+    epochs: 1000
+    regularizer: 0.01
+    sparsity constrain: 10e-5
+    no shuffle
+    
+2.- experiment: 400 inputs
+    classes: 4
+    layers, epochs,regularizer, sparsity: (1)
+    accuracy: 0.95
+    loss: 0.39
+    test_acc: 0.67
+    test_loss: 1.216
+    time: 301.73
+    with suffle
+    
+3.- experiment: 100 inputs
+    classes: 5
+    epochs,regularizer, sparsity: (1)
+    layers: 32 8 4
+    accuracy: 0.71
+    loss: 0.927
+    test_acc: 0.59
+    test_loss: 1.18
+    time: 197.46
+    with suffle
+
+4.- 4 classes experiment same parameters
+    accuracy: 0.84
+    loss: 0.61
+    test_acc: 0.725
+    test_loss: 0.94
+    time: 197.46
+
+
+# -- sigmoid without constrains
+5.- 4 classes experiment
+    layers: 64 32 16
+    batch: 500
+    accuracy: 0.93
+    loss: 0.32
+    test_acc: 0.7705
+    test_loss: 0.806
+    time: 197.46
+    
+6.- 4 clases normal layer 100 input 1000 batch
+    accuracy: 0.9025
+    loss: 0.3773
+    test_acc: 0.739
+    test_loss: 0.894
+    time: 171.36
+
+7.- 5 clases normal layer 100 input 1000 batch
+    accuracy: 0.82
+    loss: 0.546
+    test_acc: 0.6525
+    test_loss: 1.302
+    time: 177.009
+    
+8.- 5 classes normal layer 400 input 1000 batch
+    accuracy: 0.99
+    loss: 0.12
+    test_acc: 0.629
+    test_loss: 2.24
+    time: 312.79
+    shuffle = true with activity regularizer
+    
+9.- 4 clases normal layer 400 input 1000 batch
+    accuracy: 0.99
+    loss: 0.11
+    test_acc: 0.74
+    test_loss: 1.26
+    time: 202.57
+    shuffle = true with activity regularizer
+
+10.-  5 fingerprint classes
+      batch size = 10
+      sigmoid
+      1000 training 3000 testing
+      epoch = 400
+      layers: 64 32 16
+      with activity regularizer
+      accuracy: 0.951
+      loss: 0.1824
+      test_acc: 0.848
+      test_loss: 0.713
+      time: 456.41
+    
+11.- 4 clases, same parameters as above
+      accuracy: 0.95
+      loss: 0.167
+      test_acc: 0.860
+      test_loss: 0.60
+      time: 444.53
+    
+---------------------------
+1.- roi detection model_from_json
+    accuracy: 100
+    val_accuracy = 0.85
+    val_lostt = 0.188
+    layers: 256 32 48 1
+    epochs: 100
+
+2.- epochs: 1000
+    same dataset
+    100% accuracy
+    0.4 loss
+
+3.- roi detection
+    0.86 accuracy
+    100 training 100 test

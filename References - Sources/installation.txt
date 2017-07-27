@@ -1,3 +1,6 @@
+INCOMPLETE!!!
+# References incomplete, maybe read the paper
+
 For this project we will be using:
 	SOFTWARE:
 
